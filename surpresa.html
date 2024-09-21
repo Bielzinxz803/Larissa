@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Dancing Script', cursive;
+            background: linear-gradient(135deg, #fff, #f7f7f7);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            position: relative;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .message-container {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .message {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .petals {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .petal {
+            position: absolute;
+            background-image: url('https://via.placeholder.com/50/ffffff');
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            animation: fall 8s linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .typing {
+            font-size: 2.5rem;
+            color: #ff6666;
+            font-family: 'Dancing Script', cursive;
+            margin-top: 20px;
+        }
+
+        .cursor {
+            display: inline-block;
+            background-color: #333;
+            width: 10px;
+            height: 30px;
+            margin-left: 5px;
+            animation: blink 0.7s step-end infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+    <title>Minha Surpresa Para Você</title>
+</head>
+<body>
+    <div class="message-container">
+        <div class="message">
+            Meu amor, estar longe de você tem sido um desafio que só reforça o quanto eu te amo e sinto sua falta. Cada momento distante é preenchido pelo desejo de te abraçar, de sentir seu toque e de compartilhar todas as pequenas coisas que tornam nossa história tão especial.<br><br>
+
+            A cada dia que passa, percebo o quanto você é essencial na minha vida, o quanto a sua presença me completa e me faz sentir mais forte. Você é o meu refúgio, a minha paz, e, mesmo que a distância tente nos separar, ela não tem o poder de apagar o que sinto por você. Pelo contrário, é como se o amor que carrego por ti crescesse a cada segundo, se fortalecesse a cada saudade e se tornasse ainda mais claro a cada pensamento que tenho de nós dois.<br><br>
+
+            Eu imagino nosso reencontro em tantos momentos do meu dia. Penso no momento em que finalmente vou te ver de novo, quando meus braços poderão te envolver e eu poderei sentir o calor do seu corpo junto ao meu. Esse pensamento me dá forças para continuar, para superar a distância e o tempo, porque sei que, no final, tudo valerá a pena. Tudo que vivemos até aqui, todas as dificuldades e desafios, só me mostraram que o amor que temos é único e inabalável. Você é a razão dos meus sorrisos, o motivo pelo qual meu coração bate mais forte e a pessoa que eu quero ao meu lado, hoje e sempre.<br><br>
+
+            A vida pode ser imprevisível e cheia de obstáculos, mas com você, eu sei que posso enfrentar qualquer coisa. O amor que compartilhamos é minha âncora, o que me mantém firme mesmo nos momentos de incerteza. E, embora estejamos separados por agora, sinto que estamos mais conectados do que nunca, porque o que nos une é muito mais forte do que a distância física. Nossos corações batem em sintonia, e isso me dá a certeza de que o nosso amor é eterno.<br><br>
+
+            Quero que você saiba que, mesmo nos dias mais difíceis, mesmo quando a saudade aperta e parece que não vou aguentar, eu estou aqui, firme no nosso compromisso, no nosso amor. Você é tudo para mim, e mal posso esperar para te encontrar de novo, para viver ao seu lado cada momento que estamos perdendo agora. Porque eu sei que, quando estivermos juntos de novo, cada segundo será ainda mais precioso, cada beijo, cada olhar, cada palavra será mais especial.<br><br>
+        </div>
+        <div class="typing">Te amo...
+            <div class="cursor"></div>
+        </div>
+    </div>
+    
+    <div class="petals">
+        <div class="petal" style="left: 10%;"></div>
+        <div class="petal" style="left: 20%;"></div>
+        <div class="petal" style="left: 30%;"></div>
+        <div class="petal" style="left: 40%;"></div>
+        <div class="petal" style="left: 50%;"></div>
+        <div class="petal" style="left: 60%;"></div>
+        <div class="petal" style="left: 70%;"></div>
+        <div class="petal" style="left: 80%;"></div>
+        <div class="petal" style="left: 90%;"></div>
+    </div>
+</body>
+</html>        
+            

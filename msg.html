@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0f4c3, #ffcccb);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .message {
+            font-size: 1.8rem;
+            max-width: 800px;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .visible {
+            opacity: 1;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        .petals {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .petal {
+            position: absolute;
+            background-image: url('https://via.placeholder.com/50/ffcccb');
+            background-size: cover;
+            width: 30px;
+            height: 30px;
+            animation: fall 8s linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .reveal-button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: #ff9999;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .reveal-button:hover {
+            background-color: #ff6666;
+            transform: scale(1.1);
+        }
+
+        .final-button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            background-color: #ff9999;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.3s;
+            display: none;
+        }
+
+        .final-button:hover {
+            background-color: #ff6666;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+    <title>Um Segredo Especial</title>
+</head>
+<body>
+    <h1 class="title">Tenho Algo Para Te Contar...</h1>
+
+    <div class="message hidden" id="message1">Amor, Tudo começou com um simples olhar...</div>
+    <div class="message hidden" id="message2">Mas logo se tornou algo muito maior...</div>
+    <div class="message hidden" id="message3">Cada momento ao seu lado é inesquecível...</div>
+    <div class="message hidden" id="message4">E agora eu tenho algo muito especial a te dizer...</div>
+
+    <div class="petals">
+        <div class="petal" style="left: 10%;"></div>
+        <div class="petal" style="left: 20%;"></div>
+        <div class="petal" style="left: 30%;"></div>
+        <div class="petal" style="left: 40%;"></div>
+        <div class="petal" style="left: 50%;"></div>
+        <div class="petal" style="left: 60%;"></div>
+        <div class="petal" style="left: 70%;"></div>
+        <div class="petal" style="left: 80%;"></div>
+        <div class="petal" style="left: 90%;"></div>
+    </div>
+
+    <button class="reveal-button" id="revealButton">Clique para revelar...</button>
+
+    <button class="final-button" id="finalButton" onclick="window.location.href='surpresa.html'">Uma Surpresa Te Espera!</button>
+
+    <script>
+        let currentMessage = 1;
+
+        const revealButton = document.getElementById('revealButton');
+        const finalButton = document.getElementById('finalButton');
+        
+        revealButton.addEventListener('click', () => {
+            const currentMessageElement = document.getElementById('message' + currentMessage);
+            if (currentMessageElement) {
+                currentMessageElement.classList.remove('hidden');
+                currentMessageElement.classList.add('visible');
+            }
+
+            currentMessage++;
+
+            if (currentMessage > 4) {
+                revealButton.style.display = 'none';  // Oculta o botão de revelar
+                finalButton.style.display = 'block';  // Exibe o botão final
+            }
+        });
+    </script>
+</body>
+</html>

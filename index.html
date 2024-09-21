@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f9d8e8, #f0f4c3);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .header {
+            position: absolute;
+            top: 20px;
+            text-align: center;
+            animation: fadeIn 1s;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .photo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .photo-grid .photo {
+            width: 150px;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+            transform: rotate(45deg);
+            transition: transform 0.5s, filter 0.3s;
+            cursor: pointer;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .photo-grid .photo:hover {
+            transform: rotate(45deg) scale(1.1);
+            filter: brightness(1.2);
+        }
+
+        .interact-button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            background-color: #ffcccb;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .interact-button:hover {
+            background-color: #ff9999;
+            transform: scale(1.1);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 1.2rem;
+            animation: fadeIn 1s;
+        }
+        .link {
+            text-decoration: none;
+            font-family: cursive;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+    <title>Para Minha Princesa</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">Para você, Amorzinho ❤️ </h1>
+    </header>
+
+    <div class="container">
+        <div class="photo-grid">
+            <div class="photo" style="background-image: url('https://i.ibb.co/7tZG99k/foto-8.jpg');"></div>
+            <div class="photo" style="background-image: url('https://i.ibb.co/NpjsVcc/foto-1.jpg');"></div>
+            <div class="photo" style="background-image: url('https://i.ibb.co/ZKhWQSF/foto-7.jpg');"></div>
+            <div class="photo" style="background-image: url('https://i.ibb.co/Yb0HXqL/foto-4.jpg');"></div>
+            <div class="photo" style="background-image: url('https://i.ibb.co/0XVfR2b/foto-9.jpg');"></div>
+        </div>
+        <button class="interact-button"><a class="link" href="msg.html">Clique Aqui!</a></button>
+    </div>
+
+    <footer class="footer">❤️ Sempre Seu</footer>
+
+    <script>
+        const button = document.querySelector('.interact-button');
+        const photoGrid = document.querySelectorAll('.photo');
+
+        button.addEventListener('click', () => {
+            alert('Amo Você❤️, Você é incrível Amor! 😊');
+        });
+
+        photoGrid.forEach(photo => {
+            photo.addEventListener('mouseover', () => {
+                photo.style.border = '2px solid #ff9999';
+            });
+
+            photo.addEventListener('mouseout', () => {
+                photo.style.border = '2px solid rgba(255, 255, 255, 0.8)';
+            });
+        });
+    </script>
+</body>
+</html>

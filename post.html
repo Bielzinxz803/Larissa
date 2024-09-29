@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Jornada Juntos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+            font-family: 'Dancing Script', cursive;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            color: #333;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            margin-bottom: 30px;
+        }
+
+        .heart-clock-container {
+            position: relative;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .heart {
+            font-size: 7rem;
+            color: #e63946;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .date {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.4rem;
+            color: #6c757d;
+            background: #fff;
+            padding: 5px 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        .photo-container {
+            position: relative;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .photo-container img {
+            width: 100px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .months-text {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: #e63946;
+            font-weight: bold;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .social-media {
+            margin-top: 40px;
+            font-size: 1.5rem;
+        }
+
+        .social-media a {
+            margin: 0 15px;
+            color: #e63946;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social-media a:hover {
+            color: #ff6f61;
+            transform: scale(1.2);
+        }
+
+        .next-page-button {
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 30px;
+            font-size: 1.3rem;
+            color: #fff;
+            background-color: #e63946;
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .next-page-button:hover {
+            background-color: #ff6f61;
+            transform: scale(1.1);
+        }
+
+        .music-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: #fff;
+            background-color: #e63946;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .music-button:hover {
+            background-color: #ff6f61;
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+    <audio autoplay loop>
+        <source src="videoplayback.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+    <div class="container">
+        <div class="heart-clock-container">
+            <i class="fas fa-heart heart"></i>
+            <div class="date">27 de abril de 2024</div>
+        </div>
+
+        <div class="photo-container">
+            <img src="https://i.ibb.co/jwnMJ38/Imagem-do-Whats-App-de-2024-09-29-s-17-34-36-eb60a071.jpg" alt="Foto do Casal">
+        </div>
+
+        <p>Escute a música que desejo para você:</p>
+        <button class="music-button" onclick="document.querySelector('audio').play()">Ouvir Música</button>
+
+        <div class="social-media">
+            <a href="https://www.instagram.com/lariuch2008/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+
+        <a href="surpresa.html" class="next-page-button">Clique aqui para uma surpresa especial!</a>
+    </div>
+</body>
+</html>
